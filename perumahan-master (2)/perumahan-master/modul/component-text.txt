@@ -1,0 +1,36 @@
+defined('BASEPATH') or exit('No direct script access allowed');
+
+'data'          =>  $this->m_perum->where()
+
+public function where()
+    {
+        return $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
+    }
+
+$this->session->set_flashdata('pesan', '<div class="alert with-icon alert-success" role="alert"><i class="icon fa fa-check"></i><h4 class="text-center" style="margin-top:13px;"><button type="button" class="close" data-dismiss="alert" aria-label="fa fa-times"><span aria-hidden="true">&times;</span></button>
+            Data berhasil di<strong>Tambahkan!.</strong></h4></div>');
+
+cek_login();
+
+<section id="header-page" class="header-margin-base" style="margin-bottom: 50px;">
+    <div class="skyline">
+        <span class="cover"><img src="img/banner.png" alt=""></span>
+        <div class="container header-text">
+            <div>
+                <h1 class="title"><?= $menu; ?></h1>
+            </div>
+            <div>
+                <h2 class="sub-title"><?= $submenu; ?></h2>
+            </div>
+        </div>
+    </div>
+    <div id="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="<?= base_url('perumahan'); ?>"><i class="fa fa-home"></i></a></li>
+                <li><a href="<?= base_url($menu); ?>"><?= $menu; ?></a></li>
+                <li class="active"><?= $submenu; ?></li>
+            </ol>
+        </div>
+    </div><!-- /#breadcrumb -->
+</section><!-- /#header -->
